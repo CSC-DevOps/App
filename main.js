@@ -34,7 +34,7 @@ function stop()
 
 if( CMD === "start" )
 {
-	start();
+	await start();
 }
 
 module.exports = { start: start, stop: stop};
