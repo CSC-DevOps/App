@@ -31,10 +31,11 @@ function stop()
 	return server.close();
 }
 
-
-if( CMD === "start" )
-{
-	await start();
-}
+(async => {
+	if( CMD === "start" )
+	{
+		await start();
+	}
+});
 
 module.exports = { start: start, stop: stop};
