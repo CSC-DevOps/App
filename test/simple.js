@@ -13,25 +13,14 @@ describe('Array', function() {
 
 describe('main', function() {
     describe('#start()', function() {
-      it('should start server on port 9001', function(done){
+      it('should start server on port 9001', async () => {
 
-        (async () => {
+          await main.start();
 
-            await main.start();
-
-            try {
-                const response = await got('http://localhost:9001', {timeout:500});
-                console.log(response.body);
-
-                expect(response.body).to.contain('Hi From');
-
-            } catch (error) {
-                console.error(error.code || error.statusCode);
-            }
-
-            await main.stop();
-            done();
-        })();
+          const response = await got('http://localhost:9001', {timeout:500})
+          // Stop server
+          await main.stop();
+          expect(response.body).to.include('Hi From');
       });
     });
   });
