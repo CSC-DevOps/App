@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "version": "0.0.7",
+  "version": "0.9.1",
   "description": "test app",
   "main": "main.js",
   "scripts": {
@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "express": "^4.12.3"
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
   }
 }
