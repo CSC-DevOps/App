@@ -1,0 +1,7 @@
+{
+    "apps" : [{
+      "name"        : "pipeline-server",
+      "script"      : "./main.js",
+      "args"        : "start 5001"
+    }]
+}
