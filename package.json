@@ -6,8 +6,8 @@
   "scripts": {
     "test": "mocha",
     "start": "node main.js start 5001",
-    "deploy": "./node_modules/.bin/pm2 start process.json",
-    "stop": "./node_modules/.bin/pm2 stop process.json"
+    "deploy": "pm2 start process.json",
+    "stop": "pm2 stop process.json"
   },
   "author": "",
   "license": "ISC",
