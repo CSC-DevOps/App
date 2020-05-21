@@ -6,14 +6,15 @@
   "scripts": {
     "test": "mocha",
     "start": "node main.js start 5001",
-    "deploy": "pm2 start process.json",
-    "stop": "pm2 stop process.json"
+    "deploy": "./node_modules/.bin/pm2 start process.json",
+    "stop": "./node_modules/.bin/pm2 stop process.json"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "pm2": "^4.4.0"
   },
   "dependencies": {
     "express": "^4.16.4",
